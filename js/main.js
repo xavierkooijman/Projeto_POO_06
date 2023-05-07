@@ -15,6 +15,7 @@ AFRAME.registerComponent('cursor-listener', {
     init: function () {
         this.el.addEventListener('click', function (evt) {
         document.querySelector('#texto-caixa').setAttribute('visible', 'true')
+        document.querySelector('#cao').setAttribute('class', 'clickable')
     });
     this.el.addEventListener('mouseleave', function (evt) {
         document.querySelector('#texto-caixa').setAttribute('visible', 'false')
