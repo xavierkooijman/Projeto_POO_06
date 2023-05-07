@@ -1,0 +1,11 @@
+Model Information:
+* title:	Couch PBR Free
+* source:	https://sketchfab.com/3d-models/couch-pbr-free-c3787995a9954e1c937dd7bef5c189ad
+* author:	donnichols (https://sketchfab.com/donnichols)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Couch PBR Free" (https://sketchfab.com/3d-models/couch-pbr-free-c3787995a9954e1c937dd7bef5c189ad) by donnichols (https://sketchfab.com/donnichols) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

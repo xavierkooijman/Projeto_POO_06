@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <title>Nivel 1</title>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity camera look-controls wasd-controls>
+        <a-entity cursor="fuse: true; fuseTimeout: 1500"
+                  raycaster="objects: .clickable;"
+                  animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 250; from: 0.1 0.1 0.1; to: 1 1 1"
+                  animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                  animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material="color: black; shader: flat">
+        </a-entity>
+        <a-entity id="chave-grab" obj-model="obj: #chave;" position="0.00002 -0.56026 -1.28038" rotation="180 0 0" scale="0.001 0.001 0.001" material="color: yellow" visible="false"></a-entity>
+        <a-entity id="regador-grab" obj-model="obj: #regador" position="9.05373 -1.86178 -6.14054" scale="0.03 0.03 0.03" material="color: #7d7b93" visible="false"></a-entity>
+      </a-entity>
+      <a-plane position="0 -5 0" rotation="-90 0 0" width="20" height="20" src="../assets/textures/floor2.png"></a-plane>
+      <a-plane position="0 4.7 0" rotation="90 0 0" width="20" height="20" src="../assets/textures/teto.jpg"></a-plane>
+      <a-box depth="20" height="10" position="10.431 -0.232 0" src="../assets/textures/wall3.jpg"></a-box>
+      <a-box width="21" height="10" position="0.100 -0.232 9.840" src="../assets/textures/wall3.jpg"></a-box>
+      <a-box depth="20" height="10" position="-10.483 -0.232 0" src="../assets/textures/wall3.jpg"></a-box>
+      <a-box depth="20" height="10" position="0 0 -10.44877" src="../assets/textures/wall3.jpg" rotation="0 90 0"></a-box>
+      <a-assets>
+        <a-asset-item id="estante-obj" src="../assets/objects/estante/bookshelf-041.obj"></a-asset-item>
+        <a-asset-item id="secretaria-obj" src="../assets/objects/secretaria/desk-018.obj"></a-asset-item>
+        <a-asset-item id="lampada-obj" src="../assets/objects/lampada/desk_lamp.obj"></a-asset-item>
+        <a-asset-item id="lampada-mtl" src="../assets/objects/lampada/desk_lamp.mtl"></a-asset-item>
+        <a-asset-item id="lock-obj" src="../assets/objects/porta_lock/uploads_files_882230_door+handle_only1.obj"></a-asset-item>
+        <a-asset-item id="lock-mtl" src="../assets/objects/porta_lock/uploads_files_882230_door+handle_only1.mtl"></a-asset-item>
+        <a-asset-item id="shiba" src="../assets/objects/shiba/scene.gltf"></a-asset-item>
+        <a-asset-item id="caixa-pista" src="../assets/objects/caixa/scene.gltf"></a-asset-item>
+        <a-asset-item id="cama" src="../assets/objects/cama/scene.gltf"></a-asset-item>
+        <a-asset-item id="neon" src="../assets/objects/neon_sign/scene.gltf"></a-asset-item>
+        <a-asset-item id="cadeira" src="../assets/objects/cadeira/scene.gltf"></a-asset-item>
+        <a-asset-item id="gato" src="../assets/objects/gato/scene.gltf"></a-asset-item>
+        <a-asset-item id="planta" src="../assets/objects/planta2/scene.gltf"></a-asset-item>
+        <a-asset-item id="regador" src="../assets/objects/regador/regador.obj"></a-asset-item>
+        <a-asset-item id="chave" src="../assets/objects/Key2/Key2.obj"></a-asset-item>
+      </a-assets>
+      <a-entity geometry="primitive: plane; height: 5; width: 2.36" position="0 -1.27265 -9.928" rotation="" material="shader: flat; src: ../assets/textures/door.jpg" scale="1.5 1.5 1.5"></a-entity>
+      <a-entity obj-model="obj: #estante-obj;" scale="3 3 3" position="8.274 -5.006 8.799" material="src: ../assets/textures/estante.jpg"></a-entity>
+      <a-entity obj-model="obj: #secretaria-obj;" scale="4 4 4" position="-7.195 -5.013 8.113" rotation="0 180 0" material="src: ../assets/textures/teto.jpg"></a-entity>
+      <a-entity obj-model="obj: #lampada-obj; mtl: #lampada-mtl;" scale="5 5 5" rotation="0 90 0" position="-4.994 -1.993 8.919"></a-entity>
+      <a-entity id="lock1" obj-model="obj: #lock-obj; mtl: #lock-mtl;" cursor-listener3 class="clickable" rotation="90 0 0" scale="0.3 0.3 0.3" position="-1.223 -1.506 -9.939" sound="src: ../assets/sounds/porta_fechada.mp3; on: click"></a-entity>
+      <a-entity id="lock2" obj-model="obj: #lock-obj; mtl: #lock-mtl;" cursor-listener7 rotation="90 0 0" scale="0.3 0.3 0.3" position="-1.223 -1.506 -9.939" visible="false" sound="src: ../assets/sounds/porta.mp3; on: click"></a-entity>
+      <a-entity gltf-model="#shiba" cursor-listener class="clickable" position="-8.488 -4.010 2.414" rotation="0 130 0" sound="src: ../assets/sounds/cao.mp3; on: click"></a-entity>
+      <a-entity gltf-model="#caixa-pista" cursor-listener2 class="clickable" position="7.34697 -1.98396 8.79065" scale="0.001 0.001 0.001" sound="src: ../assets/sounds/caixa_abrir.mp3; on: click"></a-entity>
+      <a-entity id="cama1" gltf-model="#cama" position="1.01551 -4.93104 5.69923" scale="2 2 2" rotation="0 180 0" animation="property: position; to: 1.016 -4.931 2.54635; loop: false; dur: 3000; easing: linear; startEvents: click;" sound="src: ../assets/sounds/mexer_cama.mp3; on: click"></a-entity>
+      <a-entity gltf-model="#neon" position="0.871 0.2657 9.30434" scale="8 8 8" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#cadeira" position="8.65779 -4.9982 -5.58878" scale="3 3 3"></a-entity>
+      <a-entity id="planta1" gltf-model="#planta" position="-9.05978 -4.88627 -9.10344" scale="7 7 7"></a-entity>
+      <a-entity id="planta2" gltf-model="#planta" position="-9.05978 -4.88627 -9.10344" scale="7 7 7" visible="false" sound="src: ../assets/sounds/regar.mp3; on: click" cursor-listener6></a-entity>
+      <a-entity id="regador-jogo" obj-model="obj: #regador" sound="src: ../assets/sounds/regador.mp3; on: click" position="10.03649 -4.97022 4.33751" scale="0.03 0.03 0.03" material="color: #7d7b93" cursor-listener5></a-entity>
+      <a-entity gltf-model="#gato" position="7.93018 -5.00167 -2.60932" scale="0.004 0.004 0.004" rotation="0 210.00000000000003 0" class="clickable" sound="src: ../assets/sounds/gato.mp3; on: click"></a-entity>
+      <a-entity id="chave-jogo" obj-model="obj: #chave;" cursor-listener4 visible="false" position="-5.93877 -1.86655 7.82385" rotation="-47.066191038816605 -170.7351204132389 -92.41064390326508" scale="0.001 0.001 0.001" material="color:yellow;" sound="src: ../assets/sounds/chave.mp3; on: click"></a-entity>
+      <a-text id="texto-shiba" value="De noite tem seis pes mas de manha so tem quatro pes." geometry="primitive: plane; width: 5;" material="color: #7b7b65" position="-8.30097 -3.046 2.411" text="align: center" rotation="180 -50 180" visible="false"></a-text>
+      <a-text id="texto-caixa" value="Qual e o animal\nmais ladrao do mundo?" geometry="primitive: plane; width: 2.71" material="color: #7b7b65" position="5.17782 -0.52558 8.59497" text="align: center" rotation="180 0 180" visible="false"></a-text>
+      <a-text id="texto-lock" value="Encontre a chave para abrir a porta\nDica: O cubo pode ter uma pista" geometry="primitive: plane; width: 3.43" material="color: #7b7b65" position="-3.60356 0 -9.74626" text="align: center" visible="false"></a-text>
+      <a-text id="texto-planta" value="Algo apareceu na secretaria" geometry="primitive: plane; width: 2.91" material="color: #7b7b65" position="-7.96493 -0.76641 -9.5397" text="align: center" visible="false"></a-text>
+      <a-text id="texto-parabens" value="Parabens, escapaste\nClica no botao para voltar ao menu principal" geometry="primitive: plane; width: 4.48" material="color: #7b7b65" position="0 0.49305 -9.74754" text="align: center" visible="false"></a-text>
+    </a-scene>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
