@@ -4,6 +4,7 @@ AFRAME.registerComponent('cursor-listener', {
         document.querySelector('#texto-shiba').setAttribute('visible', 'true')
         document.querySelector('#cama1').setAttribute('class', 'clickable')
         document.querySelector('#regador-jogo').setAttribute('class', 'clickable')
+        alert("Teste do commit no branch Xavier-Kooijman")
     });
     this.el.addEventListener('mouseleave', function (evt) {
         document.querySelector('#texto-shiba').setAttribute('visible', 'false')
