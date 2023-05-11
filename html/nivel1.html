@@ -9,14 +9,8 @@
   <body>
     <a-scene>
       <a-entity camera look-controls wasd-controls>
-        <a-entity cursor="fuse: true; fuseTimeout: 1500"
-                  raycaster="objects: .clickable;"
-                  animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 250; from: 0.1 0.1 0.1; to: 1 1 1"
-                  animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
-                  animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
-                  position="0 0 -1"
-                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                  material="color: black; shader: flat">
+        <a-entity cursor="rayOrigin: mouse"
+                  raycaster="objects: .clickable;">
         </a-entity>
         <a-entity id="chave-grab" obj-model="obj: #chave;" position="0.00002 -0.56026 -1.28038" rotation="180 0 0" scale="0.001 0.001 0.001" material="color: yellow" visible="false"></a-entity>
         <a-entity id="regador-grab" obj-model="obj: #regador" position="9.05373 -1.86178 -6.14054" scale="0.03 0.03 0.03" material="color: #7d7b93" visible="false"></a-entity>
@@ -50,7 +44,7 @@
       <a-entity obj-model="obj: #lampada-obj; mtl: #lampada-mtl;" scale="5 5 5" rotation="0 90 0" position="-4.994 -1.993 8.919"></a-entity>
       <a-entity id="lock1" obj-model="obj: #lock-obj; mtl: #lock-mtl;" cursor-listener3 class="clickable" rotation="90 0 0" scale="0.3 0.3 0.3" position="-1.223 -1.506 -9.939" sound="src: ../assets/sounds/porta_fechada.mp3; on: click"></a-entity>
       <a-entity id="lock2" obj-model="obj: #lock-obj; mtl: #lock-mtl;" cursor-listener7 rotation="90 0 0" scale="0.3 0.3 0.3" position="-1.223 -1.506 -9.939" visible="false" sound="src: ../assets/sounds/porta.mp3; on: click"></a-entity>
-      <a-entity gltf-model="#shiba" cursor-listener class="clickable" position="-8.488 -4.010 2.414" rotation="0 130 0" sound="src: ../assets/sounds/cao.mp3; on: click"></a-entity>
+      <a-entity id="cao" gltf-model="#shiba" cursor-listener position="-8.488 -4.010 2.414" rotation="0 130 0" sound="src: ../assets/sounds/cao.mp3; on: click"></a-entity>
       <a-entity gltf-model="#caixa-pista" cursor-listener2 class="clickable" position="7.34697 -1.98396 8.79065" scale="0.001 0.001 0.001" sound="src: ../assets/sounds/caixa_abrir.mp3; on: click"></a-entity>
       <a-entity id="cama1" gltf-model="#cama" position="1.01551 -4.93104 5.69923" scale="2 2 2" rotation="0 180 0" animation="property: position; to: 1.016 -4.931 2.54635; loop: false; dur: 3000; easing: linear; startEvents: click;" sound="src: ../assets/sounds/mexer_cama.mp3; on: click"></a-entity>
       <a-entity gltf-model="#neon" position="0.871 0.2657 9.30434" scale="8 8 8" rotation="0 180 0"></a-entity>
