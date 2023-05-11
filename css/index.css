@@ -96,7 +96,7 @@ section{
 	margin-top: 3px;
     z-index: 1;
     display: block;
-    transition: .2s ease-in-out;
+    transition: .4s ease-in-out;
 }
 
 #button-play:hover{
