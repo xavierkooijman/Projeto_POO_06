@@ -26,7 +26,8 @@ body{
 	display: flex;
 	list-style: none;
 	width: 100%;
-    justify-content: right;
+	justify-content: right;
+	margin-right: 15px;
 }
 
 .navbar ul li{
@@ -49,7 +50,16 @@ body{
 
 #navbar-menu{
     background: url(../assets/textures/navbar.png) no-repeat right -0.5rem;
+	background-size: 50% 100%;
     height: 80px;
+	margin-top: -150px;
+	display: flex;
+	justify-content: center;
+}
+
+#navbar-logo{
+	display: inline-block;
+	z-index: 1;
 }
 
 #navbar-logo img{
@@ -71,14 +81,38 @@ section{
 	height: 100%;
 }
 
+#button-play{
+	border: 5px solid #000;
+	text-decoration: none;
+    border-radius: 30px;
+    background-color:  yellow;
+	color: #472800;
+    font-family: komika,serif;
+	text-align: center;
+	font-size: 1rem;
+	height: 50%;
+    width: 7%;
+	padding-top: 0.50rem;
+	margin-top: 3px;
+    z-index: 1;
+    display: block;
+    transition: .2s ease-in-out;
+}
+
+#button-play:hover{
+	transform: scale(1.05);
+	background-color: #f0f;
+	color: #fff;
+}
+
 section p{
 	font-size: 1.5rem;
 }
 
 section#home{
-	background: url(../assets/textures/main2.jpg) no-repeat center center/cover;
+	background: url(../assets/textures/main6.jpg) no-repeat center center/cover;
 }
 
 section#sobre{
-	background: url(../assets/textures/main-bg.png) no-repeat center center/cover;
+	background: url(../assets/textures/main5.jpg) no-repeat center center/cover;
 }
