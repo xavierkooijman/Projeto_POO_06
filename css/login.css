@@ -31,7 +31,7 @@ body{
 }
 
 #navbar-logo img{
-	scale: 0.9;
+	  scale: 0.9;
     transition: .4s ease-in-out;
 }
 
