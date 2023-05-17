@@ -11,7 +11,7 @@
 body{
   min-height: 100vh;
   width: 100%;
-  background: url(../assets/textures/main6.jpg) no-repeat center center/cover;
+  background: url(../assets/textures/main12.jpg) no-repeat center center/cover;
   font-family: komika,serif;
 }
 .container{
@@ -60,7 +60,7 @@ body{
   text-align: center;
   margin-bottom: 1.5rem;
 }
- .form input{
+.form input{
    height: 60px;
    width: 100%;
    padding: 0 15px;
@@ -71,7 +71,7 @@ body{
    border-radius: 6px;
    outline: none;
  }
- .form input:focus{
+.form input:focus{
    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
  }
 .form a{
